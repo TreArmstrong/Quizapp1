@@ -15,8 +15,8 @@ function Nav() {
         <Link to="/" onClick={() => setIsOpen(false)}>LRNR</Link>
       </div>
       <ul id="nav-mobile" className={`right hide-on-med-and-down ${isOpen ? 'open' : ''}`}>
-        <li><Link to="/AccountPage" onClick={() => setIsOpen(false)}>Account</Link></li>
-        <li><Link to="/QuizPage" onClick={() => setIsOpen(false)}>Quiz Generator</Link></li>
+        <li><Link to="/account" onClick={() => setIsOpen(false)}>Account</Link></li>
+        <li><Link to="/quiz-generation" onClick={() => setIsOpen(false)}>Quiz Generator</Link></li>
       </ul>
       <div className="navbar-toggle" onClick={toggleMenu}>
         
