@@ -50,6 +50,7 @@ const QuizPage = () => {
                 <p>Question {currentQuestionIndex + 1} of {quizData.questions.length}</p>
             </div>
         </div>
+    
     );
 };
 
