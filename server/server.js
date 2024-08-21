@@ -16,7 +16,7 @@ app.use(express.json());
 
 //Serve static files
 app.use(express.static(path.join(__dirname, 'public')));
-
+console.log(path.join(__dirname, '../build', 'index.html'));
 
 app.post("/test", (req, res) => {
     console.log("POST /test route accessed");
@@ -60,6 +60,11 @@ app.post('/generate-trivia', async (req, res) => {
       res.status(500).send({ error: 'Failed to generate trivia questions' }); // Send an error response
     }
 });
+
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, '../build', 'index.html'));
+
+})
 
 // Start server
 app.listen(port, () => {
