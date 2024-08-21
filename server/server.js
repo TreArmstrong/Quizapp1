@@ -49,7 +49,7 @@ app.post('/generate-trivia', async (req, res) => {
       const response = await axios.post('https://api.anthropic.com/v1/messages', requestBody, {
         headers: {
           'Content-Type': 'application/json',
-          'x-api-key': process.env.ANTHROPIC_API_KEY, 
+          'x-api-key': process.env.ANTHROPIC_API_KEY || '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', 
           'anthropic-version': '2023-06-01'
         }
       });
