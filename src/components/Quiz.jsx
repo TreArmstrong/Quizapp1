@@ -38,7 +38,7 @@ const Quiz = () => {
         try {
             // Send POST request to /generate-quiz endpoint
             console.log('Sending POST request to /generate-trivia endpoint');
-            const response = await fetch('http://localhost:4000/generate-trivia', {
+            const response = await fetch('/api/generate-trivia', {
                 // Set content type to application/json and body to quizOptions(stringified)
                 method: 'POST',
                 headers: {
