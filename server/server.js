@@ -15,7 +15,7 @@ app.use(cors());
 app.use(express.json());
 
 //Serve static files
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, '../build')));
 console.log(path.join(__dirname, '../build', 'index.html'));
 
 app.post("/test", (req, res) => {
@@ -49,8 +49,8 @@ app.post('/generate-trivia', async (req, res) => {
       const response = await axios.post('https://api.anthropic.com/v1/messages', requestBody, {
         headers: {
           'Content-Type': 'application/json',
-          'x-api-key': process.env.ANTHROPIC_API_KEY, 
-          'anthropic-version': '2023-06-01'
+          'x-api-key': process.env.ANTHROPIC_API_KEY , 
+          'anthropic-version': '2023-06-
         }
       });
   
@@ -62,8 +62,8 @@ app.post('/generate-trivia', async (req, res) => {
 });
 
 app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, '../build', 'index.html'));
-
+    // res.sendFile(path.join(__dirname, '../build', 'index.html'));
+res.send('hello')
 })
 
 // Start server
