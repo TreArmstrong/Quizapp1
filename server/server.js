@@ -50,7 +50,7 @@ app.post('/generate-trivia', async (req, res) => {
         headers: {
           'Content-Type': 'application/json',
           'x-api-key': process.env.ANTHROPIC_API_KEY , 
-          'anthropic-version': '2023-06-
+          'anthropic-version': '2023-06-01'
         }
       });
   
